@@ -1,12 +1,38 @@
-// components/Footer.js
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/Logo.png";
-function footer(){
+
+function Footer() {
+  
+  const [email, setEmail] = useState('');
+  
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubscribe = (event) => {
+    event.preventDefault();
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email.match(emailPattern)) {
+    
+      alert('Thank you for subscribing!');
+
+      
+      localStorage.setItem('subscribedEmail', email);
+
+      setEmail('');
+    } else {
+      
+      alert('Please enter a valid email address.');
+    }
+  };
+
   return (
     <footer>
       <div className="footer-banner">
-        <img src={Logo}  id="logo" alt="logo" />
+        <img src={Logo} id="logo" alt="logo" />
       </div>
 
       <div className="footer-links">
@@ -19,8 +45,16 @@ function footer(){
       <div className="newsletter">
         <p>Let's connect:</p>
         <p><i>Subscribe to our newsletter</i></p>
-        <input type="email" id="footerEmail" placeholder="Enter your email" name="email" />
-        <button id="footerSubmit">Submit</button>
+        <form onSubmit={handleSubscribe}>
+          <input
+            type="email"
+            id="footerEmail"
+            placeholder="Enter your email"
+            value={email}
+            onChange={handleEmailChange}
+          />
+          <button id="footerSubmit" type="submit">Submit</button>
+        </form>
       </div>
 
       <div className="operating-hours">
@@ -31,6 +65,6 @@ function footer(){
       </div>
     </footer>
   );
-};
+}
 
-export default footer;
+export default Footer;
