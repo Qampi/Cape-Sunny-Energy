@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Sign_Up from './pages/Sign_Up';
 import Forgot_Password from './pages/Forgot_Password';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Sign_Up />} />
-            <Route path="/forgot-password" element={<Forgot_Password />} />         
+            <Route path="/forgot-password" element={<Forgot_Password />} />      
+            <Route path="/dashboard" element={<Dashboard />} />       
         </Routes>
         <Footer />
     </BrowserRouter>
