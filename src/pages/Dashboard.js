@@ -54,7 +54,8 @@ const Dashboard= () => {
                     <label for="address">Address<span>*</span></label>
                     <textarea id="address" name="address" required></textarea><br/>
                     <button type="submit">Update Details</button>
-                    <button style="background-color: #ff0000;  ;" type="button" >Delete Account</button><br/>
+                    <button style={{ backgroundColor: '#ff0000' }} type="button">Delete Account</button><br />
+
                      
                 </div>
                 <div class="form-group">
