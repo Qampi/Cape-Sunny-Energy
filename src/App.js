@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,6 +11,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Sign_Up from './pages/Sign_Up';
+import Forgot_Password from './pages/Forgot_Password';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Sign_Up />} />
-          
+            <Route path="/forgot-password" element={<Forgot_Password />} />         
         </Routes>
         <Footer />
     </BrowserRouter>

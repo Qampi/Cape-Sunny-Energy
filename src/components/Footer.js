@@ -1,12 +1,45 @@
-// components/Footer.js
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../assets/Logo.png";
-function footer(){
+
+function Footer() {
+  const footerEmailInput = useRef(null);
+  const footerSubmitBtn = useRef(null);
+
+  useEffect(() => {
+    const submitBtn = footerSubmitBtn.current;
+    const emailInput = footerEmailInput.current;
+
+    const handleClick = (event) => {
+      event.preventDefault();
+      const email = emailInput.value;
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email.match(emailPattern)) {
+        alert('Thank you for subscribing!');
+        localStorage.setItem('subscribedEmail', email);
+        emailInput.value = '';
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    };
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', handleClick);
+    }
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (submitBtn) {
+        submitBtn.removeEventListener('click', handleClick);
+      }
+    };
+  }, []);
+
   return (
     <footer>
       <div className="footer-banner">
-        <img src={Logo}  id="logo" alt="logo" />
+        <img src={Logo} id="logo" alt="logo" />
       </div>
 
       <div className="footer-links">
@@ -19,8 +52,8 @@ function footer(){
       <div className="newsletter">
         <p>Let's connect:</p>
         <p><i>Subscribe to our newsletter</i></p>
-        <input type="email" id="footerEmail" placeholder="Enter your email" name="email" />
-        <button id="footerSubmit">Submit</button>
+        <input type="email" ref={footerEmailInput} placeholder="Enter your email" name="email" />
+        <button ref={footerSubmitBtn}>Submit</button>
       </div>
 
       <div className="operating-hours">
@@ -31,6 +64,6 @@ function footer(){
       </div>
     </footer>
   );
-};
+}
 
-export default footer;
+export default Footer;
