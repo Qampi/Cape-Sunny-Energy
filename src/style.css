@@ -111,6 +111,137 @@ footer{
   border: none;
 }
 
+/*Contact style*/
+.heading{
+  text-align: center;
+  background-color: #648063;
+  color: white;
+  padding: 1px;
+  size: 90px;
+}
+.container-contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color:transparent;
+  max-width: 1000px;
+  margin: 20px auto;
+
+}
+.box-1 {
+  background:lightgreen;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 48%;
+
+
+
+}
+.box-2{
+  background:#D9D9D9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 48%;
+ 
+ 
+
+}
+
+.box-1 h3, .box-2 h3 {
+  margin-bottom: 10px;
+ margin-left: 25%;
+}
+.box-1 p, .box-2 p{
+color: blue;
+margin-left: 25%;
+}
+.contact-info {
+  font-size: 16px;
+}
+
+.contact-info div {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+.contact-item1 .contact-item2, .contact-item3, .contact-item4, .contact-item5 {
+  display: flex;
+  align-items:center;
+}
+.contact-item1 i
+{
+  color:burlywood;
+  text-decoration: none;
+}
+.contact-item2 i
+{
+  color:blue;
+  text-decoration: none;
+}
+
+.contact-item3 i
+{
+  color:red;
+  text-decoration: none;
+}
+
+.contact-item4 i
+{
+  color:purple;
+  text-decoration: none;
+} .contact-item5 i {
+  color: blue;
+  text-decoration: none;
+}
+
+.contact-item4 a:hover, .contact-item5 a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.contact label {
+  display:flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+  align-self: center;
+  margin-right: 45%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  align-self:center;
+  margin-right: 100px;
+  
+}
+
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  background:#00D900;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+}
+.contact button:hover {
+  background: #575757;
+
+
 /*home page*/
 .header {
     position: relative;
@@ -610,5 +741,6 @@ h2{
   background-color: #f0f0f0; 
   border-radius: 5px; 
   color: #000; 
+
 
 }
