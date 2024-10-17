@@ -207,13 +207,14 @@ margin-left: 25%;
   display:flex;
   margin-bottom: 5px;
   font-weight: bold;
-  align-self: center;
+  align-self: left;
   margin-right: 45%;
+  margin-left: 24%;
 }
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
-  width: 70%;
+  width: 40%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
@@ -240,7 +241,7 @@ margin-left: 25%;
 }
 .contact button:hover {
   background: #575757;
-
+}
 
 /*home page*/
 .header {
