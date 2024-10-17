@@ -104,3 +104,125 @@ footer{
   color: #040316;
   border: none;
 }
+
+/*About style*/
+.heading{
+  text-align: center;
+  background-color: #648063;
+  color: white;
+  padding: 1px;
+  size: 90px;
+}
+.containerAbout1{
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+  width: 85%;
+  left: 7.5%;
+  position: relative;
+  background-color:white;
+  gap:50px;
+}
+
+.text h1{
+  font-size: 36px;
+}
+
+.boxAbout1{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+ 
+}
+
+.box {
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  padding: 20px;
+ 
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+
+}
+
+
+.box h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #333;
+  text-align: left; 
+}
+
+.box p {
+  font-size: 1em;
+  color: #666;
+  text-align: left; 
+}
+
+h2{
+  text-align: center;
+}
+.team-row {
+  display: flex; 
+ justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+}
+
+.team-row.centered {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+}
+
+
+.team-row figure {
+  text-align: center; 
+  margin: 10px; 
+}
+
+.team-row img {
+ width: 200px; 
+ height: 180px; 
+ border-radius: 100px; 
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+ transition: transform 0.3s ease;  
+
+}
+
+.team-row img:hover {
+  transform: scale(1.05); 
+}
+
+
+.team-row figcaption {
+  margin-top: 10px; 
+  font-size: 14px; 
+  color: #333; 
+  font-weight: bold; 
+  line-height: 1.4; 
+} 
+
+#approach-link, #mission-link, #vision-link {
+  padding: 10px;
+  font-weight: bold; 
+  border-radius: 5px;
+  background-color: #e0e0e0; 
+  text-decoration: none;
+  color: #000; 
+}
+
+#approach-link:hover, #mission-link:hover, #vision-link:hover {
+  background-color: #f0f0f0; 
+  border-radius: 5px; 
+  color: #000; 
+}
