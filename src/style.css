@@ -298,6 +298,31 @@ margin-left: 25%;
     background-color:white;
 }
 
+.slideshow-container {
+  position: relative;
+  height: 600px; /* Match your image height */
+  overflow: hidden; /* Hide overflowing images */
+}
+
+.mySlides-fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.mySlides-fade.active {
+  opacity: 1; /* Current image is fully visible */
+}
+
+.mySlides-fade:not(.active) {
+  filter: blur(5px); /* Blur previous and next images */
+  opacity: 0.5; /* Semi-transparent for a soft effect */
+  z-index: 1; /* Ensure they're below the active slide */
+}
+
+.mySlides-fade.active ~ .mySlides-fade {
+  z-index: 0; /* Ensure active slide is above */
+}
+
 /*dashbord*/
 .dash-container {
     max-width: 800px;
